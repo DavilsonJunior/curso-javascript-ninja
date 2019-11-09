@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        
+        var pessoa = {
+    nome: 'Davilson',
+    sobrenome: 'Junior',
+    sexo: 'Masculino',
+    idade: 26,
+    altura: 1.83,
+    peso: 72,
+    andando: false,
+    caminhouQuantosMetros: 0 
+    };
+
+    pessoa.fazerAniversario = function() {
+    return pessoa.idade++;
+}
+
+pessoa.andar = function(caminhar) {
+    if( (caminhar !== 0) && (caminhar !== undefined) ) {
+        pessoa.caminhouQuantosMetros += caminhar;
+        pessoa.andando = true;
+    } else {
+        pessoa.andando = false;
+    }
+}
+
+    </script>
+
+</body>
+</html>

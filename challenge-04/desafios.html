@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        
+        var isTruthy = function(param) {
+            return !param;
+        }
+
+        var carro = {marca:'Chevrolet',modelo:'Onix Joy',placa:'FAT3998',ano:2018,cor:'Vermelho Chile',quantasPortas:4,assentos:5,quantidadePessoas:0};
+
+        function mudaCor(cor){
+            carro.cor = cor;
+            return carro.cor;
+        }
+
+        function obterCor(){
+            carro.cor = 'Vermelho Chile';
+            return carro.cor;
+        }
+
+        function addPessoa(quantidade) {
+            var resultado;
+            if(carro.quantidadePessoas < 5) {
+                if( (quantidade <= 5) && (carro.quantidadePessoas < 5) ) {
+                    carro.quantidadePessoas += quantidade;
+                    if(carro.quantidadePessoas <= 5) {
+                        resultado = 5 - carro.quantidadePessoas; 
+                        if(resultado == 1) {
+                            return "Só cabem mais "+resultado+" pessoa!";
+                        }
+                        return "Só cabem mais "+resultado+" pessoas!";
+                    } else {
+                        carro.quantidadePessoas -= quantidade;
+                        resultado = 5 - carro.quantidadePessoas; 
+                        return "Só cabem mais "+resultado+" pessoas!";
+                    }
+                } else {
+                    resultado = quantidade - carro.quantidadePessoas;
+                    return "Só cabem mais "+resultado+" pessoas!";
+                }
+                
+            } else {
+                return "O carro já está lotado!";
+            }
+
+            
+        }
+
+    </script>
+
+</body>
+</html>
