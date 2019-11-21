@@ -82,10 +82,15 @@ Mostre no console todas as propriedades e valores de todos os livros,
 no formato abaixo:
     "[PROPRIEDADE]: [VALOR]"
 */
-for( var prop in books ) {
+for(var i = 0; i < Object.keys( books ).length; i++) {
+    for(var prop in books[i]) {
+        console.log(prop +': '+books[i][prop]);    
+    }
+}
+/*for( var prop in books ) {
     console.log('name: '+books[prop].name);
     console.log('pages: '+books[prop].pages);
-}
+}*/
 
 /*
 Crie um array chamado `myName`. Cada item desse array deve ser uma letra do
